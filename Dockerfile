@@ -1,7 +1,8 @@
 # gitlab-ci-runner
 
 FROM ubuntu:12.04
-MAINTAINER  Sytse Sijbrandij "sytse@gitlab.com"
+# Based on work of  Sytse Sijbrandij "sytse@gitlab.com"
+MAINTAINER Kirill Pimenov "kirill@pimenov.cc"
 
 # This script will start a runner in a docker container.
 #
