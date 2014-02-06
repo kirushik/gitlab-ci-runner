@@ -53,4 +53,4 @@ RUN cd /gitlab-ci-runner && gem install bundler && bundle install
 
 # When the image is started add the remote server key, unstall the runner and run it
 WORKDIR /gitlab-ci-runner
-CMD ssh-keyscan -H $GITLAB_SERVER_FQDN >> /root/.ssh/known_hosts && mysqld & /root/redis-stable/src/redis-server & /etc/init.d/postgresql start & bundle exec ./bin/setup_and_run
+CMD ssh-keyscan -H $GITLAB_SERVER_FQDN >> /root/.ssh/known_hosts && bundle exec ./bin/setup_and_run
