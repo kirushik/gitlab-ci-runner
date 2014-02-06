@@ -27,7 +27,7 @@ RUN apt-get install -y wget curl gcc libxml2-dev libxslt-dev libcurl4-openssl-de
 
 # Download Ruby and compile it
 RUN mkdir /tmp/ruby && cd /tmp/ruby && curl --progress http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0.tar.gz | tar xz
-RUN cd /tmp/ruby/ruby-1.9.3-p392 && ./configure --disable-install-rdoc --prefix=/usr/local && make && make install
+RUN cd /tmp/ruby/ruby-2.1.0 && ./configure --disable-install-rdoc --prefix=/usr/local && make && make install
 
 
 # Install packages commonly required to test Rails projects before the test run starts
