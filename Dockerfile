@@ -34,7 +34,10 @@ RUN cd /tmp/ruby/ruby-2.1.0 && ./configure --disable-install-rdoc --prefix=/usr/
 # If they are not here you have to add them to the test script in the project settings
 RUN apt-get install -y libqtwebkit-dev # test with capybara
 RUN apt-get install -y redis-server
-RUN apt-get install -y phantomjs
+
+# Getting latest Phantomjs from official source because official packages suck
+RUN mkdir /tmp/phantomjs && cd /tmp/phantomjs && curl --progress  http://cdn.bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2|tar xj && cp /tmp/phantomjs/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin
+
 RUN apt-get install -y nodejs
 RUN apt-get install -y libsqlite3-dev
 
