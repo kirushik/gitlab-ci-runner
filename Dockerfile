@@ -35,6 +35,7 @@ RUN cd /tmp/ruby/ruby-2.1.0 && ./configure --disable-install-rdoc --prefix=/usr/
 RUN apt-get install -y libqtwebkit-dev # test with capybara
 RUN apt-get install -y redis-server
 RUN apt-get install -y phantomjs
+RUN apt-get install -y nodejs
 
 # Set the right locale for Postgres
 RUN echo "LC_ALL=\"en_US.UTF-8\"" >> /etc/default/locale
